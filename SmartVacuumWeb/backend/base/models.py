@@ -10,3 +10,10 @@ class Sensor(models.Model):
 
     def __str__(self):
         return(self.name)
+
+class Status(models.Model):
+    start = models.BooleanField( default = False)
+    reference = models.DecimalField(max_digits = 7, decimal_places = 2, null = True, blank = True)
+
+    def __str__(self):
+        return("Status")
